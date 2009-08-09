@@ -68,7 +68,7 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
 h2. Credits
-* The name Octavo suggested by "Arnia":http://swhack.com/logs/2009-08-09#T14-10-02 <jgeldart[at]gmail.com>
+* The name Octavo suggested by "Joe Geldart":http://swhack.com/logs/2009-08-09#T14-10-02 <jgeldart[at]gmail.com>
 	(He also made a sleek logo that made me want to write a
 	new skin! That, coming soon in v1.1)
 * lib/textile.php by Dean Allen <dean[at]textism.com>
