@@ -18,7 +18,7 @@ h2. Installation
 # URL rewrites (currently required)
 This is *required* (FIXME?):
 lighttpd.conf:
-@@
+@
 url.rewrite-once = (
   "^/note/(.*)\.(.*)" => "$0",
   "^/note/(img|css|js)/" => "$0",
@@ -26,7 +26,7 @@ url.rewrite-once = (
   "^/note/(.+)$" => "/note/index.php?redir=$1&path=",
   "^/note/$" => "/note/index.php"
 )
-@@
+@
 [here, "note" (webserverpath) is the directory in which
 	Notebook's code resides]
 
@@ -35,6 +35,7 @@ Too lazy to try and write a thing that works in a
 similar way. Nice people, help. :)
 
 h2. Hacking
+
 Hacking Octavo is easy, really, though not much of it is
 documented. lib contains libraries of functions with self-
 explanaory names tpl contains templates used to output things,
@@ -42,6 +43,7 @@ and inc contains URI handlers, (e.g /archive/first-post is
 handled by /inc/archive.php)
 
 h2. License
+
 Copyright (c) 2009 Shashi Gowda 
 
 Permission is hereby granted, free of charge, to any person
