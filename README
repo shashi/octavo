@@ -1,0 +1,73 @@
+h1. Octavo v1.0
+
+h2. Introduction
+
+Octavo is a set of Notebook/Diary script writtens for personal,
+single-user use. It is intended to be used locally on one's
+own computer and does not supposrt logins and sessions (yet).
+
+h2. Features
+* Neat, KISSy interface, no bulky images.
+* tag cloud.
+* date search. (e.g "/date/today" works perfectly)
+* one single db table.
+
+h2. Installation
+# Execute install.sql (using phpPgAdmin or such tool)
+# edit conf.php
+# URL rewrites (currently required)
+This is *required* (FIXME?):
+lighttpd.conf:
+@@
+url.rewrite-once = (
+  "^/note/(.*)\.(.*)" => "$0",
+  "^/note/(img|css|js)/" => "$0",
+  "^/note/(.+?)/(.*)$" => "/note/index.php?redir=$1&path=$2",
+  "^/note/(.+)$" => "/note/index.php?redir=$1&path=",
+  "^/note/$" => "/note/index.php"
+)
+@@
+[here, "note" (webserverpath) is the directory in which
+	Notebook's code resides]
+
+.htaccess
+Too lazy to try and write a thing that works in a
+similar way. Nice people, help. :)
+
+h2. Hacking
+Hacking Octavo is easy, really, though not much of it is
+documented. lib contains libraries of functions with self-
+explanaory names tpl contains templates used to output things,
+and inc contains URI handlers, (e.g /archive/first-post is
+handled by /inc/archive.php)
+
+h2. License
+Copyright (c) 2009 Shashi Gowda 
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+h2. Credits
+* The name Octavo suggested by "Arnia":http://swhack.com/logs/2009-08-09#T14-10-02 <jgeldart[at]gmail.com>
+	(He also made a sleek logo that made me want to write a
+	new skin! That, coming soon in v1.1)
+* lib/textile.php by Dean Allen <dean[at]textism.com>
+* Everything else by "Shashi Gowda":mailto:connect2shashi@gmail.com

@@ -1,0 +1,7 @@
+This folder contains serialized data.
+Fine MediaWiki programmers have found
+that serializing is more faster than
+querying DB / Executing a file with
+variable declaration. Tag cloud data
+is currently the only thing that gets
+serialized.

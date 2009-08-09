@@ -1,0 +1,14 @@
+a { color: #333;text-decoration:none; border-bottom:dotted 1px #000 }
+html { font: 1em/1.5em Georgia, Serif; text-align: center }
+body { max-width: 600px; margin: 3em auto }
+p { margin: 0 0 8px 0 }
+h1 { font-weight: normal; margin-top: 0em; 
+   color: #223; font-variant: small-caps; letter-spacing: 0.2ex }
+hr { margin-top: 1.5em; margin-bottom: 1.5em }
+li {list-style:none; text-align:right;}
+input, textarea { -moz-border-radius:5px;border:solid #999 1px;
+	height:25px; font-size:15px;padding:3px;}
+.archives { width:230px; float:left; padding-right:10px;border-right:1px dashed #333;}
+.tag-cloud { width:200px; float:left; text-align:left; padding:15px}
+.tag-cloud span {margin:0 5px 0 0}
+.clr {clear:both;}
